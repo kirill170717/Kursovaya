@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9f8f45f709f94bf282e503d83fa5b2ea" Name="Diagram1">
+        <EntityTypeShape EntityType="gr691_tkpModel.Kurs_Accept" Width="1.5" PointX="3" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="gr691_tkpModel.Kurs_Client" Width="1.5" PointX="3" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="gr691_tkpModel.Kurs_ExerciseForDay" Width="1.5" PointX="5.25" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="gr691_tkpModel.Kurs_Gender" Width="1.5" PointX="0.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="gr691_tkpModel.Kurs_Presence" Width="1.5" PointX="3" PointY="17.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="gr691_tkpModel.Kurs_Request" Width="1.5" PointX="5.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="gr691_tkpModel.Kurs_Role" Width="1.5" PointX="1.5" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="gr691_tkpModel.Kurs_Trainer" Width="1.5" PointX="3" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="gr691_tkpModel.Kurs_TrainingProgram" Width="1.5" PointX="3" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="gr691_tkpModel.Kurs_Unit" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="gr691_tkpModel.Kurs_User" Width="1.5" PointX="0.75" PointY="8.625" IsExpanded="true" />
+        <AssociationConnector Association="gr691_tkpModel.FK_Kurs_Request_ToTable_2" ManuallyRouted="false" />
+        <AssociationConnector Association="gr691_tkpModel.FK_Kurs_Client_ToTable" ManuallyRouted="false" />
+        <AssociationConnector Association="gr691_tkpModel.FK_Kurs_Client_ToTable_1" ManuallyRouted="false" />
+        <AssociationConnector Association="gr691_tkpModel.FK_Kurs_Client_ToTable_2" ManuallyRouted="false" />
+        <AssociationConnector Association="gr691_tkpModel.FK_Kurs_Request_ToTable" ManuallyRouted="false" />
+        <AssociationConnector Association="gr691_tkpModel.FK_Kurs_ExerciseForDay_ToTable" ManuallyRouted="false" />
+        <AssociationConnector Association="gr691_tkpModel.FK_Kurs_ExerciseForDay_ToTable_1" ManuallyRouted="false" />
+        <AssociationConnector Association="gr691_tkpModel.FK_Kurs_ExerciseForDay_ToTable_2" ManuallyRouted="false" />
+        <AssociationConnector Association="gr691_tkpModel.FK_Kurs_Request_ToTable_1" ManuallyRouted="false" />
+        <AssociationConnector Association="gr691_tkpModel.FK_Kurs_User_ToTable" ManuallyRouted="false" />
+        <AssociationConnector Association="gr691_tkpModel.FK_Kurs_Trainer_ToTable" ManuallyRouted="false" />
+        <AssociationConnector Association="gr691_tkpModel.FK_Kurs_TrainingProgram_ToTable" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,24 @@
+﻿<Window x:Class="Kurs.Авторизация"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kurs"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Секция волейбола ДЮСШ №5" Height="440" Width="920">
+    <Window.Resources>
+        <Color x:Key="Color1">#FF0068FF</Color>
+    </Window.Resources>
+    <Window.Background>
+        <ImageBrush ImageSource="Картинки/Удар.jpg" Opacity="1"/>
+    </Window.Background>
+    <Grid Margin="0,0,2,0">
+        <Label Content="Авторизация" FontSize="48" Margin="600,10,0,0" HorizontalAlignment="Left" Width="300" Height="75" VerticalAlignment="Top" Foreground="Black"/>
+        <TextBox Name="TxtLogin" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Введите логин" Margin="600,90,0,0" HorizontalAlignment="Left" Width="300" Height="40" VerticalAlignment="Top" Foreground="Black" BorderBrush="Black" FontSize="24"/>
+        <PasswordBox Name="PasPassword" materialDesign:HintAssist.Hint="Введите пароль" Margin="600,135,0,0" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Width="300" BorderBrush="Black" FontSize="24"/>
+        <Button Content="Войти" Margin="795,216,0,0" Click="Button_Auth" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Width="105" Background="#000068FF" BorderBrush="#00673AB7" Foreground="Black" FontSize="24"/>
+        <Button Content="Регистрация" Margin="725,359,0,0" Click="Button_Reg" Height="40" FontSize="24" VerticalAlignment="Top" HorizontalAlignment="Left" Width="175" Background="#000068FF" BorderBrush="#00673AB7" Foreground="Black"/>
+    </Grid>
+</Window>

@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{97447615-A186-4811-A0C8-EEDE6922A5D1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Kurs</RootNamespace>
+    <AssemblyName>Kurs</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=1.2.7.1979, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.1.2.7\lib\net45\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=3.2.0.1979, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.3.2.0\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Kurs_Accept.cs">
+      <DependentUpon>Модель курсовой.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Kurs_Client.cs">
+      <DependentUpon>Модель курсовой.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Kurs_ExerciseForDay.cs">
+      <DependentUpon>Модель курсовой.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Kurs_Gender.cs">
+      <DependentUpon>Модель курсовой.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Kurs_Presence.cs">
+      <DependentUpon>Модель курсовой.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Kurs_Request.cs">
+      <DependentUpon>Модель курсовой.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Kurs_Role.cs">
+      <DependentUpon>Модель курсовой.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Kurs_Trainer.cs">
+      <DependentUpon>Модель курсовой.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Kurs_TrainingProgram.cs">
+      <DependentUpon>Модель курсовой.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Kurs_Unit.cs">
+      <DependentUpon>Модель курсовой.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Kurs_User.cs">
+      <DependentUpon>Модель курсовой.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MethAuth.cs" />
+    <Compile Include="MethCli.cs" />
+    <Compile Include="MethPre.cs" />
+    <Compile Include="MethPZ.cs" />
+    <Compile Include="MethRasp.cs" />
+    <Compile Include="MethReg.cs" />
+    <Compile Include="MethReq.cs" />
+    <Compile Include="MethTrain.cs" />
+    <Compile Include="MethZTr.cs" />
+    <Compile Include="SystemExit.cs" />
+    <Compile Include="АвтКлиент.xaml.cs">
+      <DependentUpon>АвтКлиент.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Авторизация.xaml.cs">
+      <DependentUpon>Авторизация.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Выбор тренера.xaml.cs">
+      <DependentUpon>Выбор тренера.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Заявки.xaml.cs">
+      <DependentUpon>Заявки.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ЗаявкиКл.xaml.cs">
+      <DependentUpon>ЗаявкиКл.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ЗаявкиТр.xaml.cs">
+      <DependentUpon>ЗаявкиТр.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Клиенты.xaml.cs">
+      <DependentUpon>Клиенты.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Модель курсовой.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Модель курсовой.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Модель курсовой.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Модель курсовой.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Модель курсовой.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Модель курсовой.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Окно тренера.xaml.cs">
+      <DependentUpon>Окно тренера.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Окно администратора.xaml.cs">
+      <DependentUpon>Окно администратора.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Расписание.xaml.cs">
+      <DependentUpon>Расписание.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="РасписаниеКлиент.xaml.cs">
+      <DependentUpon>РасписаниеКлиент.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Регистрация.xaml.cs">
+      <DependentUpon>Регистрация.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Тренеры.xaml.cs">
+      <DependentUpon>Тренеры.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <EntityDeploy Include="Модель курсовой.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Модель курсовой.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Модель курсовой.edmx.diagram">
+      <DependentUpon>Модель курсовой.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="АвтКлиент.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Авторизация.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Выбор тренера.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Заявки.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ЗаявкиКл.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ЗаявкиТр.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Клиенты.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Окно тренера.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Окно администратора.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Расписание.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="РасписаниеКлиент.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Регистрация.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Тренеры.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Картинки\Волейболист.png" />
+    <Resource Include="Картинки\Зал.jpg" />
+    <Resource Include="Картинки\Заявки.png" />
+    <Resource Include="Картинки\Клиенты.png" />
+    <Resource Include="Картинки\Мяч.png" />
+    <Resource Include="Картинки\Расписание.png" />
+    <Resource Include="Картинки\Тренер1.png" />
+    <Resource Include="Картинки\Тренер2.png" />
+    <Resource Include="Картинки\Тренер3.png" />
+    <Resource Include="Картинки\Тренеры.png" />
+    <Resource Include="Картинки\Удар.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Картинки\Сетка.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Картинки\Сетка2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Модель курсовой.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Модель курсовой.edmx</DependentUpon>
+      <LastGenOutput>Модель курсовой.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Модель курсовой.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Модель курсовой.edmx</DependentUpon>
+      <LastGenOutput>Модель курсовой.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets'))" />
+  </Target>
+</Project>

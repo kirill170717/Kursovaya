@@ -1,0 +1,55 @@
+﻿<Window x:Class="Kurs.ЗаявкиТр"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kurs"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="ЗаявкиТр" Height="500" Width="1200" Loaded = "Window_Loaded">
+    <Window.Resources>
+        <Color x:Key="Color1">#FF0068FF</Color>
+    </Window.Resources>
+    <Window.Background>
+        <ImageBrush ImageSource="Картинки/Зал.jpg" Opacity="0.7"/>
+    </Window.Background>
+    <Grid>
+        <DataGrid Name="Таб_ЗаявкиТр" HorizontalAlignment="Left" AutoGenerateColumns="False" Width="1192" Canvas.Left="22" Canvas.Top="37" Height="285" VerticalAlignment="Top" Background="#99FAFAFA">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding IdRequest}" Header="Id" Width="*"/>
+                <DataGridTextColumn Binding="{Binding ClientId}" Header="ClientId" Width="*"/>
+                <DataGridTextColumn Binding="{Binding TrainerId}" Header="TrainerId" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Дата_создания_заявки}" Header="Дата создания заявки" Width="2*"/>
+                <DataGridTextColumn Binding="{Binding Цель}" Header="Цель" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Kurs_Accept.Принята}" Header="Принята" Width="90"/>
+                <DataGridTextColumn Binding="{Binding Комментарий}" Header="Комментарий" Width="2*"/>
+                <DataGridTextColumn Binding="{Binding Дата_ответа}" Header="Дата ответа" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <ComboBox Name="Accept" HorizontalAlignment="Left" VerticalAlignment="Top" Width="300" materialDesign:HintAssist.Hint="Принята:" DisplayMemberPath="Принята" Margin="230,417,0,0" Height="40" FontSize="24" BorderBrush="White" Foreground="White">
+            <ComboBox.Background>
+                <SolidColorBrush Color="#0000FFFF" Opacity="0"/>
+            </ComboBox.Background>
+            <ComboBox.ItemContainerStyle>
+                <Style TargetType="ComboBoxItem">
+                    <Setter Property="Foreground" Value="Black"/>
+                </Style>
+            </ComboBox.ItemContainerStyle>
+        </ComboBox>
+        <ComboBox Name="Unit" HorizontalAlignment="Left" VerticalAlignment="Top" Width="129" materialDesign:HintAssist.Hint="Группа:" DisplayMemberPath="Группа" Margin="570,417,0,0" Height="40" FontSize="24" BorderBrush="White" Foreground="White">
+            <ComboBox.Background>
+                <SolidColorBrush Color="#0000FFFF" Opacity="0"/>
+            </ComboBox.Background>
+            <ComboBox.ItemContainerStyle>
+                <Style TargetType="ComboBoxItem">
+                    <Setter Property="Foreground" Value="Black"/>
+                </Style>
+            </ComboBox.ItemContainerStyle>
+        </ComboBox>
+        <TextBox Name="TxtComm" HorizontalAlignment="Left" Height="122" TextWrapping="Wrap" VerticalAlignment="Top" Width="1172" materialDesign:HintAssist.Hint="Комментарий" Margin="10,290,0,0" FontSize="24" Foreground="White" BorderBrush="White"/>
+        <TextBox Name="TxtIdReq" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" materialDesign:HintAssist.Hint="Id" Margin="10,417,0,0" FontSize="24" Foreground="White" BorderBrush="White"/>
+        <Button Content="Ответить" HorizontalAlignment="Left" VerticalAlignment="Top" Width="140" Margin="730,417,0,0" Click="Button_Upd" Height="40" Background="#000068FF" FontSize="24" BorderBrush="#00673AB7"/>
+        <Button Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="1082,419,0,0" Click="Button_Back" Height="40" Background="#000068FF" FontSize="24" BorderBrush="#00673AB7"/>
+    </Grid>
+</Window>
